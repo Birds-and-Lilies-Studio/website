@@ -39,6 +39,7 @@ nav {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
+    margin-right: 40px;
 }
 
 nav ul {
