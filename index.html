@@ -58,13 +58,16 @@
     </main>
 
     <footer>
-      <p>&copy; 2024 Birds and Lilies Studio. All Rights Reserved.</p>
       <p>
-        Contact:
-        <a href="mailto:birdsandliliesstudio@gmail.com"
-          >birdsandliliesstudio@gmail.com</a
-        >
+        &copy; <span id="year"></span> Birds and Lilies Studio. All Rights
+        Reserved.
       </p>
+      <script>
+        const startYear = 2025;
+        const currentYear = new Date().getFullYear();
+        document.getElementById("year").textContent =
+          currentYear > startYear ? `${startYear}–${currentYear}` : startYear;
+      </script>
     </footer>
 
     <script src="app.js"></script>
