@@ -1,6 +1,16 @@
+/* Fonts */
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/glacial-indifference/GlacialIndifference-Regular.woff2') format('woff2'),
+         url('fonts/glacial-indifference/GlacialIndifference-Regular.woff') format('woff'),
+         url('fonts/glacial-indifference/GlacialIndifference-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: white;
@@ -43,6 +53,7 @@ nav {
 }
 
 nav ul {
+    font-size: 18px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -189,9 +200,9 @@ nav ul {
 footer {
     text-align: center;
     background-color: lavender;
-    padding: 10px;
+    padding: 5px;
+    margin-top: 30px;
     border-top: 3px solid navy;
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
