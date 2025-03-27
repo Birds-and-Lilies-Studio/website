@@ -23,9 +23,8 @@ updateBibleQuote();
 
 // Featured Artwork Rotator
 const featuredArtImages = [
-  "placeholder-art1.jpg",
-  "placeholder-art2.jpg",
-  "placeholder-art3.jpg",
+  "images/art/Matthew 6 25-34/IMG_3855.JPG",
+  "images/art/Psalm 36/IMG_3857.JPG",
 ];
 
 let featuredIndex = 0;

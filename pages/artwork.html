@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artwork Gallery | Birds and Lilies Studio</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../images/logos/BirdsandLiliesLogo.ico"
+    />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/artwork.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="../images/logos/BirdsandLiliesLogo.png"
+          alt="Studio Logo"
+          class="logo"
+        />
+      </div>
+      <h1>Birds and Lilies Studio</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link">Artwork</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="#" class="nav-link">Sign Up / Log In</a></li>
+          <li><a href="#" class="nav-link">Settings</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="artwork-gallery">
+      <div
+        class="art-item"
+        onclick="expandArt(this)"
+        data-images='["../images/art/Matthew 6 25-34/IMG_3855.JPG", "../images/art/Matthew 6 25-34/IMG_3873.JPG", "../images/art/Matthew 6 25-34/IMG_3877.JPG"]'
+        data-title="Matthew 6:25-34"
+        data-price="$18.36"
+        data-description="This is inspired by one of my all time favorite Bible verses: Matthew 6:25-34. It talks about how much God cares about us and how he will provide everything we need so we don't have to worry about anything."
+        data-link="https://www.instagram.com/p/DHq3YBbO7qP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      >
+        <img
+          src="../images/art/Matthew 6 25-34/IMG_3855.JPG"
+          alt="Matthew 6:25-34"
+        />
+        <h3>Matthew 6:25-34</h3>
+        <p class="price">$18.36</p>
+      </div>
+      <div
+        class="art-item"
+        onclick="expandArt(this)"
+        data-images='["../images/art/Psalm 36/IMG_3857.JPG", "../images/art/Psalm 36/IMG_3863.JPG", "../images/art/Psalm 36/IMG_3866.JPG"]'
+        data-title="Psalm 36"
+        data-price="$16.32"
+        data-description="The idea that God's love for us can be compared to an endless ocean has been around forever. Psalm 36 describes how vast that love is, from the heavens to the great deep and beyond."
+        data-link="https://www.instagram.com/p/DHq4A9TuWy9/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA=="
+      >
+        <img src="../images/art/Psalm 36/IMG_3857.JPG" alt="Psalm 36" />
+        <h3>Psalm 36</h3>
+        <p class="price">$16.32</p>
+      </div>
+    </main>
+
+    <div id="art-modal" class="art-modal hidden">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div id="modal-carousel" class="carousel-container">
+          <button class="carousel-nav left" onclick="prevImage()">
+            &#10094;
+          </button>
+          <div class="image-counter" id="image-counter">1/1</div>
+          <button class="carousel-nav right" onclick="nextImage()">
+            &#10095;
+          </button>
+        </div>
+        <p id="modal-description"></p>
+        <a id="purchase-link" href="#" target="_blank" class="purchase-button"
+          >Purchase</a
+        >
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        &copy; <span id="year"></span> Birds and Lilies Studio. All Rights
+        Reserved.
+      </p>
+      <p>
+        Contact:
+        <a href="mailto:birdsandliliesstudio@gmail.com"
+          >birdsandliliesstudio@gmail.com</a
+        >
+      </p>
+      <p>
+        Instagram:
+        <a href="https://www.instagram.com/birdsandliliesstudio/"
+          >https://www.instagram.com/birdsandliliesstudio/</a
+        >
+      </p>
+    </footer>
+
+    <script>
+      const startYear = 2025;
+      const currentYear = new Date().getFullYear();
+      document.getElementById("year").textContent =
+        currentYear > startYear ? `${startYear}–${currentYear}` : startYear;
+    </script>
+    <script src="../scripts/artwork.js"></script>
+  </body>
+</html>

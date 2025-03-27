@@ -117,16 +117,21 @@ nav ul {
 
 /* Featured Art */
 .featured-art-container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 20px auto;
-    width: 60%;
+    height: 400px;
 }
 
 #featured-art-image {
-    width: 100%;
+    width: 500px;
+    height: 375px;
+    object-fit: contain;
     border: 3px solid navy;
     border-radius: 10px;
     transition: opacity 1s ease-in-out;
+    background-color: #f0f0f0;
 }
 
 /* Art Gallery */
@@ -149,12 +154,14 @@ nav ul {
     overflow: hidden;
     transform: scale(0);
     animation: pop-in 1s forwards ease-in-out;
+    flex-shrink: 0;
 }
 
 .art-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background-color: #f0f0f0;
 }
 
 @keyframes pop-in {
